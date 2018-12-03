@@ -16,6 +16,11 @@ describe 'Account' do
     end
 
     it 'records the date that a deposit is made' do
+      account.deposit(10, "02/01/2018")
+      expect(account.time).to eq "02/01/2018"
+    end
+
+    it "sets a default date of today if no date given" do
       account.deposit(10)
       expect(account.time).to eq time
     end
@@ -29,8 +34,7 @@ describe 'Account' do
 
     it 'only allows user to withdraw money they have' do
       account.deposit(5)
-      account.withdraw(10)
-      expect(account.balance).to eq 5
+      expect(account.withdraw(10)).to eq "Insufficient funds to make transaction"
     end
 
     it 'records the date a withdrawal is made' do
