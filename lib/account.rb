@@ -5,10 +5,11 @@ class Account
     @balance = 0
   end
 
-  attr_reader :balance
+  attr_reader :balance, :time
 
   def deposit(amount)
     @balance += amount
+    @time = Time.now.strftime("%d/%m/%Y")
   end
 
   def withdraw(amount)

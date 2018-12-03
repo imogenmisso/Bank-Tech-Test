@@ -23,4 +23,9 @@ describe 'Account' do
     account.withdraw(10)
     expect(account.balance).to eq 5
   end
+
+  it "records the date that a deposit was made" do
+    account.deposit(10)
+    expect(account.time).to eq "03/12/2018"
+  end
 end
