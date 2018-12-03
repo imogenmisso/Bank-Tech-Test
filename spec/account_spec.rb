@@ -43,4 +43,13 @@ describe 'Account' do
       expect(account.time).to eq time
     end
   end
+
+  context '#transactions' do
+    it "stores a log of all transactions" do
+      account.deposit(100, "03/012/2018")
+      account.deposit(2, "04/11/2018")
+      account.withdraw(20, "27/10/2018")
+      expect(account.transactions).to eq [["03/012/2018", 100, "", 100], ["04/11/2018", 2, "", 102], ["27/10/2018", "", 20, 82]]
+    end
+  end
 end
