@@ -4,6 +4,7 @@ require 'account'
 
 describe 'Account' do
   let(:account) { Account.new }
+  let(:time) {Time.now.strftime("%d/%m/%Y")}
 
   it 'sets the initial balance of the account to zero' do
     expect(account.balance).to eq 0
@@ -16,7 +17,7 @@ describe 'Account' do
 
     it "records the date that a deposit is made" do
       account.deposit(10)
-      expect(account.time).to eq "03/12/2018"
+      expect(account.time).to eq time
     end
   end
 
@@ -35,7 +36,7 @@ describe 'Account' do
     it "records the date a withdrawal is made" do
       account.deposit(10)
       account.withdraw(5)
-      expect(account.time).to eq "03/12/2018"
+      expect(account.time).to eq time
     end
   end
 end
