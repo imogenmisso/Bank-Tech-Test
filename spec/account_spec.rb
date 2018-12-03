@@ -13,4 +13,9 @@ describe 'Account' do
     expect{account.deposit(10)}.to change{account.balance}.by(10)
   end
 
+  it "allows users to withdraw money from their account" do
+    account = Account.new
+    expect{account.withdraw(5)}.to change{account.balance}.by(-5)
+  end
+
 end
