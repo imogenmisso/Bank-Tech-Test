@@ -8,7 +8,7 @@ The account class is responsible for keeping a log of all the transactions, and 
 The responsibility of the statement class is to print out all the transactions in the desired format.
 
 ## How to install my code
-  * `git clone https://github.com/imogenmisso/Bank-Tech-Test`
+  * `git clone` https://github.com/imogenmisso/Bank-Tech-Test
   * to run the tests: `rspec`
 
 ## Implementation in IRB
