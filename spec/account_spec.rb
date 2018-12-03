@@ -22,7 +22,7 @@ describe 'Account' do
 
     it 'sets a default date of today if no date given' do
       account.deposit(10)
-      expect(account.transactions).to eq [[time, 10, "", 10]]
+      expect(account.transactions).to eq [[time, 10, '', 10]]
     end
   end
 
@@ -34,13 +34,13 @@ describe 'Account' do
 
     it 'only allows user to withdraw money they have' do
       account.deposit(5)
-      expect(account.withdraw(10)).to eq 'Insufficient funds to make transaction'
+      expect(account.withdraw(10)).to eq 'Insufficient funds'
     end
 
     it 'records the date a withdrawal is made' do
       account.deposit(10)
       account.withdraw(5)
-      expect(account.transactions).to eq [[time, 10, "", 10], [time, "", 5, 5]]
+      expect(account.transactions).to eq [[time, 10, '', 10], [time, '', 5, 5]]
     end
   end
 
