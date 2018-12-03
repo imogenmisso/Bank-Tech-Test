@@ -15,6 +15,7 @@ class Account
   def withdraw(amount)
     if @balance >= amount
       @balance -= amount
+      @time = Time.now.strftime("%d/%m/%Y")
     else
       @balance
     end
