@@ -1,5 +1,7 @@
 # Bank Tech Test
 
+A tech test completed in Week 10 at Makers Academy
+
 ## Specification
 
 ### Requirements
