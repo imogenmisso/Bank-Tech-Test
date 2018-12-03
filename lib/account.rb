@@ -1,12 +1,11 @@
-class Account
+# frozen_string_literal: true
 
+class Account
   def initialize
     @balance = 0
   end
 
-  def balance
-    @balance
-  end
+  attr_reader :balance
 
   def deposit(amount)
     @balance += amount
@@ -17,7 +16,6 @@ class Account
       @balance -= amount
     else
       @balance
-    end 
+    end
   end
-
 end
