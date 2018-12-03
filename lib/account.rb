@@ -3,19 +3,22 @@
 class Account
   def initialize
     @balance = 0
+    @transactions = []
   end
 
-  attr_reader :balance, :time
+  attr_reader :balance, :transactions, :time
 
-  def deposit(amount)
+  def deposit(amount, time = Time.now.strftime('%d/%m/%Y'))
     @balance += amount
-    @time = Time.now.strftime("%d/%m/%Y")
+    @time = time
+    @transactions << [@time, amount, '', balance]
   end
 
-  def withdraw(amount)
+  def withdraw(amount, time = Time.now.strftime('%d/%m/%Y'))
     if @balance >= amount
       @balance -= amount
-      @time = Time.now.strftime("%d/%m/%Y")
+      @time = time
+      @transactions << [@time, '', amount, balance]
     else
       @balance
     end
