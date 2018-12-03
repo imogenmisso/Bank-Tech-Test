@@ -15,7 +15,15 @@ describe 'Account' do
 
   it "allows users to withdraw money from their account" do
     account = Account.new
+    account.deposit(5)
     expect{account.withdraw(5)}.to change{account.balance}.by(-5)
+  end
+
+  it "only allows user to withdraw money they have" do
+    account = Account.new
+    account.deposit(5)
+    account.withdraw(10)
+    expect(account.balance).to eq 5
   end
 
 end

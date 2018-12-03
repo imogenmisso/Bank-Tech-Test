@@ -13,7 +13,11 @@ class Account
   end
 
   def withdraw(amount)
-    @balance -= amount
-  end 
+    if @balance >= amount
+      @balance -= amount
+    else
+      @balance
+    end 
+  end
 
 end
