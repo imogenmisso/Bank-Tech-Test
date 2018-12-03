@@ -20,7 +20,7 @@ class Account
       @time = time
       @transactions << [time, '', amount, balance]
     else
-      "Insufficient funds to make transaction"
+      'Insufficient funds to make transaction'
     end
   end
 end
