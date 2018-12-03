@@ -36,6 +36,7 @@ The responsibility of the statement class is to print out all the transactions i
 
 ## How to install my code
   * `git clone` https://github.com/imogenmisso/Bank-Tech-Test
+  * run `bundle`
   * to run the tests: `Rspec`
 
 ## Implementation in IRB
