@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This class is responsible for printing all the transactions
 class Statement
   def initialize(account = Account.new)
     @account = account

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This class is responsible managing transactions
 class Account
   def initialize
     @balance = 0
