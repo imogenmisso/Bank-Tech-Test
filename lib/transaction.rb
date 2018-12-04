@@ -1,5 +1,6 @@
-class Transaction
+# frozen_string_literal: true
 
+class Transaction
   attr_reader :date, :type, :amount, :balance
 
   def initialize(date = Time.now.strftime('%d/%m/%Y'), type, amount, balance)
@@ -8,5 +9,4 @@ class Transaction
     @amount = amount
     @balance = balance
   end
-
 end

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'pry'
 # This class is responsible for printing all the transactions
 class Statement
@@ -9,11 +10,11 @@ class Statement
   def show
     string = "date || credit || debit || balance\n"
     @account.transactions.reverse_each do |transaction|
-      if transaction[0].type == "credit"
-      string += credit_display(transaction)
-      else
-      string += debit_display(transaction)
-      end
+      string += if transaction[0].type == 'credit'
+                  credit_display(transaction)
+                else
+                  debit_display(transaction)
+                end
     end
     string.chomp
   end
