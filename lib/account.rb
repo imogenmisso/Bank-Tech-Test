@@ -11,13 +11,15 @@ class Account
 
   def deposit(amount, time = Time.now.strftime('%d/%m/%Y'))
     @balance += amount
-    @transactions << [time, format('%.2f', amount), '', format('%.2f', balance)]
+    transaction = Transaction.new(time, "credit", format('%.2f', amount), format('%.2f', @balance))
+    @transactions << [transaction]
   end
 
   def withdraw(amount, time = Time.now.strftime('%d/%m/%Y'))
     if @balance >= amount
       @balance -= amount
-      @transactions << [time, '', format('%.2f', amount), format('%.2f', balance)]
+      transaction = Transaction.new(time, "debit", format('%.2f', amount), format('%.2f', @balance))
+      @transactions << [transaction]
     else
       'Insufficient funds'
     end
