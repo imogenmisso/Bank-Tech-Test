@@ -17,12 +17,12 @@ describe 'Account' do
 
     it 'records the date that a deposit is made' do
       account.deposit(10, '02/01/2018')
-      expect(account.transactions).to eq [['02/01/2018', "10.00", '', "10.00"]]
+      expect(account.transactions).to eq [['02/01/2018', '10.00', '', '10.00']]
     end
 
     it 'sets a default date of today if no date given' do
       account.deposit(10)
-      expect(account.transactions).to eq [[time, "10.00", '', "10.00"]]
+      expect(account.transactions).to eq [[time, '10.00', '', '10.00']]
     end
   end
 
@@ -40,7 +40,7 @@ describe 'Account' do
     it 'records the date a withdrawal is made' do
       account.deposit(10)
       account.withdraw(5)
-      expect(account.transactions).to eq [[time, "10.00", '', "10.00"], [time, '', "5.00", "5.00"]]
+      expect(account.transactions).to eq [[time, '10.00', '', '10.00'], [time, '', '5.00', '5.00']]
     end
   end
 
@@ -49,7 +49,7 @@ describe 'Account' do
       account.deposit(100, '03/12/2018')
       account.deposit(2, '04/11/2018')
       account.withdraw(20, '27/10/2018')
-      expect(account.transactions).to eq [['03/12/2018', "100.00", '', "100.00"], ['04/11/2018', "2.00", '', "102.00"], ['27/10/2018', '', "20.00", "82.00"]]
+      expect(account.transactions).to eq [['03/12/2018', '100.00', '', '100.00'], ['04/11/2018', '2.00', '', '102.00'], ['27/10/2018', '', '20.00', '82.00']]
     end
   end
 end

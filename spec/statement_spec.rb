@@ -4,7 +4,7 @@ require 'statement'
 
 describe 'Statement' do
   let(:time) { Time.now.strftime('%d/%m/%Y') }
-  let(:account) { double :account, transactions: [[time, "10.00", '', "10.00"], [time, "100.00", '', "110.00"], [time, '', "5.00", "105.00"]] }
+  let(:account) { double :account, transactions: [[time, '10.00', '', '10.00'], [time, '100.00', '', '110.00'], [time, '', '5.00', '105.00']] }
 
   let(:statement) { Statement.new(account) }
 
