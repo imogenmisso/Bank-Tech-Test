@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require 'account'
-require 'statement'
-require 'pry'
 
 feature 'Statement preview' do
   scenario 'User sees a statement of transactions' do
