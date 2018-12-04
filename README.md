@@ -30,9 +30,7 @@ date || credit || debit || balance
 ## My Approach
 I decided to break this problem down by writing one long feature test which adhered to the specification requirements. I then used this to guide my design and chose to have two classes: account and statement.
 
-The account class is responsible for keeping a log of all the transactions. It allows the user to credit or debit her account.
-
-The responsibility of the statement class is to print out all the transactions in the desired format.
+I initially decided to have an Account class, which allowed the user to debit or credit her account. It also kept a log of all transactions which was then printed in the Statement class. After refactoring, I decided to separate the Account class out further into a new Transaction class. This ensured that my classes were adhering to the SRP. The Transaction class stores the date, type, amount and remaining balance after a transaction.
 
 ## How to install my code
   * `git clone` https://github.com/imogenmisso/Bank-Tech-Test
