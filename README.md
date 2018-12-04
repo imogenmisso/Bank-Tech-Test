@@ -58,5 +58,5 @@ I initially decided to have an Account class, which allowed the user to debit or
  => "date || credit || debit || balance\n04/12/2018 ||  || 5.00 || 105.00\n04/12/2018 || 100.00 ||  || 110.00\n04/12/2018 || 10.00 ||  || 10.00"`
 
 ## Testing results
-* COVERAGE: 100.00% -- 73/73 lines in 5 files
-* 10 examples, 0 failures
+* COVERAGE: 100.00% -- 96/96 lines in 7 files
+* 13 examples, 0 failures
