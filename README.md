@@ -30,7 +30,7 @@ date || credit || debit || balance
 ## My Approach
 I decided to break this problem down by writing one long feature test which adhered to the specification requirements. I then used this to guide my design and chose to have two classes: account and statement.
 
-The account class is responsible for keeping a log of all the transactions, and it allows the user to credit or debit her account.
+The account class is responsible for keeping a log of all the transactions. It allows the user to credit or debit her account.
 
 The responsibility of the statement class is to print out all the transactions in the desired format.
 
