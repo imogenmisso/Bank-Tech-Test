@@ -4,11 +4,11 @@ require 'statement'
 
 describe 'Statement' do
   let(:time) { Time.now.strftime('%d/%m/%Y') }
-  let(:account) { double :account, transactions: [[time, 10, '', 10], [time, 100, '', 110], [time, '', 5, 105]] }
+  let(:account) { double :account, transactions: [[time, "10.00", '', "10.00"], [time, "100.00", '', "110.00"], [time, '', "5.00", "105.00"]] }
 
   let(:statement) { Statement.new(account) }
 
   it 'prints out the transactions on the account' do
-    expect(statement.show).to eq "date || credit || debit || balance\n03/12/2018 ||  || 5 || 105\n03/12/2018 || 100 ||  || 110\n03/12/2018 || 10 ||  || 10"
+    expect(statement.show).to eq "date || credit || debit || balance\n#{time} ||  || 5.00 || 105.00\n#{time} || 100.00 ||  || 110.00\n#{time} || 10.00 ||  || 10.00"
   end
 end
