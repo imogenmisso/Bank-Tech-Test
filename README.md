@@ -57,3 +57,7 @@ The responsibility of the statement class is to print out all the transactions i
 110], ["03/12/2018", "", 5, 105]], @time="03/12/2018">>`
 * `2.5.0 :008 > statement.show
  => "date || credit || debit || balance\n03/12/2018 ||  || 5 || 105\n03/12/2018 || 100 ||  || 110\n03/12/2018 || 10 ||  || 10"`
+
+## Testing results
+* COVERAGE: 100.00% -- 73/73 lines in 5 files
+* 10 examples, 0 failures
